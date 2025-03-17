@@ -3,7 +3,7 @@ describe('UI Tests', () => {
     cy.visit('/')
   });
 
-  it('Cadastrar um email inválido', () => {
+  it('Register an invalid email', () => {
     cy.get('[data-testid="cadastrar"]').click();
     cy.get('[data-testid="nome"]')
       .type('testeM4')
@@ -16,13 +16,13 @@ describe('UI Tests', () => {
     cy.get('span').should('include.text', 'Email deve ser um email válido');
   });
 
-  it('Logar com email vazio', () => {
+  it('Login with empty email', () => {
     cy.get('[data-testid="senha"]').type('123');
     cy.get('[data-testid="entrar"]').click();
     cy.get('span').should('include.text', 'Email é obrigatório');
   });
 
-  it('Logar com a senha vazia', () => {
+  it('Login with empty password', () => {
     cy.get('[data-testid="email"]').type('teste@teste.com');
     cy.get('[data-testid="entrar"]').click();
     cy.get('span').should('include.text', 'Password é obrigatório');
