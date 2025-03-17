@@ -1,9 +1,6 @@
-import { preencherLogin } from '../../support/functions';
-import { envirommentUi } from '../../support/functions';
-
 describe('UI Tests', () => {
   beforeEach(() => {
-    envirommentUi();
+    cy.visit('/')
   });
 
   it('Cadastrar um email inválido', () => {
