@@ -1,7 +1,7 @@
 
 describe('API Tests', () => {
 
-  it('Realizar login', () => {
+  it('Log in successfully', () => {
     cy.request({
         method: 'POST',
         url: 'https://serverest.dev/login',
@@ -16,7 +16,7 @@ describe('API Tests', () => {
       });
     });
 
-it('Realizar login com senha inválida', () => {
+it('Login with invalid password', () => {
         cy.request({
             method: 'POST',
             url: 'https://serverest.dev/login',
@@ -31,7 +31,7 @@ it('Realizar login com senha inválida', () => {
       });
     });
 
- it('Cadastrar usuário que já existe', () => {
+ it('Register user that already exists', () => {
         cy.request({
             method: 'POST',
             url: 'https://serverest.dev/usuarios',
